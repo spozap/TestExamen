@@ -2,6 +2,7 @@ package com.example.examen.Dao;
 
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
@@ -20,4 +21,10 @@ public interface bookDao {
 
     @Query("SELECT * FROM Book")
     List<Book> getBooks();
+
+    @Query("SELECT * FROM Book where bookTitle = :title")
+    Book getBook(String title);
+
+    @Delete
+    void deleteBook(Book b);
 }

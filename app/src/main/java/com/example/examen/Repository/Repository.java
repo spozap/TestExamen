@@ -54,6 +54,21 @@ public class Repository {
         return bookList;
     }
 
+    public static void removeBook(String title){
+        RoomConnection ro = RoomConnection.getRoomConnection(c);
+
+        // Si el libro existe , cojer el objeto y borrarlo
+        if (ro.bookDao().checkBookExists(title) != null ){
+            Book b = ro.bookDao().getBook(title);
+            ro.bookDao().deleteBook(b);
+            Toast.makeText(c,"Libro borrado",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(c,"No existe el libro",Toast.LENGTH_SHORT).show();
+        }
+
+        ro.destroyRoomConnection();
+        ro.close();
+    }
     // End Room
 
 }

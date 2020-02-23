@@ -6,12 +6,15 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.examen.Dao.bookDao;
 import com.example.examen.Models.Book;
 
 @Database(entities = {Book.class} ,version = 1)
 public abstract class RoomConnection extends RoomDatabase {
 
     private static RoomConnection INSTANCE;
+
+    public abstract bookDao bookDao();
 
     public static RoomConnection getRoomConnection(Context c){
 

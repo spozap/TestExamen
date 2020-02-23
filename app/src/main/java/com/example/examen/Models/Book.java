@@ -17,4 +17,35 @@ public class Book {
     @NonNull
     private String bookAuthor;
 
+    ////////////////////////////////////////
+
+    public Book() {
+    }
+
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    @NonNull
+    public String getBookTitle() {
+        return bookTitle;
+    }
+
+    public void setBookTitle(@NonNull String bookTitle) {
+        this.bookTitle = bookTitle;
+    }
+
+    @NonNull
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public void setBookAuthor(@NonNull String bookAuthor) {
+        this.bookAuthor = bookAuthor;
+    }
 }

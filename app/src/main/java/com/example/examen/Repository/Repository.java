@@ -6,6 +6,8 @@ import android.widget.Toast;
 import com.example.examen.Databases.RoomConnection;
 import com.example.examen.Models.Book;
 
+import java.util.List;
+
 public class Repository {
 
 
@@ -40,6 +42,16 @@ public class Repository {
         ro.destroyRoomConnection();
         ro.close();
 
+    }
+
+    public static List<Book> getBookList(){
+        RoomConnection ro = RoomConnection.getRoomConnection(c);
+        List<Book> bookList = ro.bookDao().getBooks();
+
+        ro.destroyRoomConnection();
+        ro.close();
+
+        return bookList;
     }
 
     // End Room

@@ -7,6 +7,8 @@ import androidx.room.Query;
 
 import com.example.examen.Models.Book;
 
+import java.util.List;
+
 @Dao
 public interface bookDao {
 
@@ -16,5 +18,6 @@ public interface bookDao {
     @Query("SELECT * FROM  Book where bookTitle = :title")
     Book checkBookExists(String title);
 
-
+    @Query("SELECT * FROM Book")
+    List<Book> getBooks();
 }

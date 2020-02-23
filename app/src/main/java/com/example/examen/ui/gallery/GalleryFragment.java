@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,7 +38,7 @@ public class GalleryFragment extends Fragment {
         rv_book.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Book> books = galleryViewModel.getBooks();
-        BooksRV brv = new BooksRV(books);
+        BooksRV brv = new BooksRV(books, Navigation.findNavController(getActivity(),R.id.nav_host_fragment));
         rv_book.setAdapter(brv);
 
         return root;

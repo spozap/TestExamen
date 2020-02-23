@@ -4,16 +4,12 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.examen.Models.Customer;
+import com.example.examen.Repository.Repository;
+
 public class ToolsViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
-
-    public ToolsViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is tools fragment");
-    }
-
-    public LiveData<String> getText() {
-        return mText;
+    public void insertCustomer(Customer c){
+        Repository.insertCustomer(c);
     }
 }

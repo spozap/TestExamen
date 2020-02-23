@@ -5,6 +5,9 @@ import android.widget.Toast;
 
 import com.example.examen.Databases.RoomConnection;
 import com.example.examen.Models.Book;
+import com.example.examen.Models.Customer;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -13,9 +16,11 @@ public class Repository {
 
     private static Context c;
     private static Repository srepository;
+    private static FirebaseDatabase firebaseDatabase;
 
     private Repository(Context c){
         this.c = c;
+        firebaseDatabase = FirebaseDatabase.getInstance();
     }
 
 
@@ -71,4 +76,13 @@ public class Repository {
     }
     // End Room
 
+    // Firebase
+
+    public static void insertCustomer(Customer cu){
+        DatabaseReference ref = firebaseDatabase.getReference().child("Customers");
+        ref.push().setValue(cu);
+        Toast.makeText(c,"Cliente registrado",Toast.LENGTH_SHORT).show();
+    }
+
+    // End Firebase
 }

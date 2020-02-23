@@ -20,6 +20,11 @@
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_menu_manage"
             android:title="Registrar cliente" />
+        <item
+            android:id="@+id/nav_customers"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Lista clientes"/>
+
     </group>
 
     <item android:title="Communicate">

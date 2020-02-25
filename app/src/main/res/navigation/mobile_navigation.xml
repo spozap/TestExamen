@@ -7,39 +7,28 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.examen.ui.home.HomeFragment"
+        android:name="com.example.examen.ui.addBook.addBookFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/add_book" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.examen.ui.gallery.GalleryFragment"
+        android:name="com.example.examen.ui.booksList.booksListFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/books_list" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.examen.ui.slideshow.SlideshowFragment"
+        android:name="com.example.examen.ui.deleteBook.deleteBookFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/delete_book" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.example.examen.ui.tools.ToolsFragment"
+        android:name="com.example.examen.ui.addCustomer.addCustomerFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/add_customer" />
 
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.example.examen.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.example.examen.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
 
     <fragment
         android:id="@+id/book_detail"
